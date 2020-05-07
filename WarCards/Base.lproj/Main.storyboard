@@ -49,8 +49,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-TM-45C" userLabel="Deal Button">
-                                        <rect key="frame" x="67" y="200" width="136" height="31"/>
-                                        <state key="normal" title="Button" image="dealbutton"/>
+                                        <rect key="frame" x="94" y="200" width="82" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lta-gj-d20"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
@@ -109,6 +112,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="FuN-kk-ptZ" id="JyY-De-JOD"/>
+                        <outlet property="leftScoreLabel" destination="6Ld-qa-Jvb" id="L6m-RZ-1Tc"/>
+                        <outlet property="rightImageView" destination="5Wc-TQ-leF" id="whO-lV-xPE"/>
+                        <outlet property="rightScoreLabel" destination="Uoq-fw-ZmO" id="IuK-aD-a1G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
