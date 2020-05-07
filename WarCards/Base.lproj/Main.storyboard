@@ -35,21 +35,21 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-4r-ycg" userLabel="Cards and Button Stack View">
-                                <rect key="frame" x="72" y="352.5" width="270" height="231"/>
+                                <rect key="frame" x="71.5" y="352.5" width="271" height="231"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="flf-E0-VTP" userLabel="Cards Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="170"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6" translatesAutoresizingMaskIntoConstraints="NO" id="FuN-kk-ptZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="card6" translatesAutoresizingMaskIntoConstraints="NO" id="FuN-kk-ptZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="170"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card9" translatesAutoresizingMaskIntoConstraints="NO" id="5Wc-TQ-leF">
-                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                                <rect key="frame" x="151" y="0.0" width="120" height="170"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-TM-45C" userLabel="Deal Button">
-                                        <rect key="frame" x="94" y="200" width="82" height="31"/>
+                                        <rect key="frame" x="94.5" y="200" width="82" height="31"/>
                                         <state key="normal" image="dealbutton"/>
                                         <connections>
                                             <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lta-gj-d20"/>
@@ -92,6 +92,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First One to 20 Wins!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-9B-rQH" userLabel="winner label">
+                                <rect key="frame" x="71.5" y="161" width="271" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-zb-fPi">
+                                <rect key="frame" x="131" y="648.5" width="152" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Reset Game"/>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqM-nb-R1R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -101,8 +117,13 @@
                             <constraint firstItem="MT2-63-5JI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CKc-Xb-VBn"/>
                             <constraint firstItem="WO8-rQ-IK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HW6-Mw-BMx"/>
                             <constraint firstItem="uHg-4r-ycg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iy9-20-awu"/>
+                            <constraint firstItem="j3a-zb-fPi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LyW-pW-FaX"/>
+                            <constraint firstItem="Gn7-9B-rQH" firstAttribute="top" secondItem="WO8-rQ-IK9" secondAttribute="bottom" constant="40" id="Mct-FT-W0B"/>
+                            <constraint firstItem="Gn7-9B-rQH" firstAttribute="trailing" secondItem="5Wc-TQ-leF" secondAttribute="trailing" id="Nci-hJ-dAd"/>
+                            <constraint firstItem="Gn7-9B-rQH" firstAttribute="leading" secondItem="FuN-kk-ptZ" secondAttribute="leading" id="TZ2-o1-6mr"/>
                             <constraint firstItem="MT2-63-5JI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YOd-xC-2Ci"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24F-zA-Up1" secondAttribute="trailing" constant="20" id="cnY-vr-HeP"/>
+                            <constraint firstItem="j3a-zb-fPi" firstAttribute="top" secondItem="uHg-4r-ycg" secondAttribute="bottom" constant="65" id="cpI-v6-bpK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="24F-zA-Up1" secondAttribute="bottom" constant="20" id="eOC-lA-VlY"/>
                             <constraint firstItem="WO8-rQ-IK9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kvh-x9-HtB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i86-og-WMs" secondAttribute="bottom" constant="20" id="nHR-rP-kLm"/>
@@ -115,8 +136,10 @@
                     <connections>
                         <outlet property="leftImageView" destination="FuN-kk-ptZ" id="JyY-De-JOD"/>
                         <outlet property="leftScoreLabel" destination="6Ld-qa-Jvb" id="L6m-RZ-1Tc"/>
+                        <outlet property="resetBtn" destination="j3a-zb-fPi" id="cgq-eA-WiO"/>
                         <outlet property="rightImageView" destination="5Wc-TQ-leF" id="whO-lV-xPE"/>
                         <outlet property="rightScoreLabel" destination="Uoq-fw-ZmO" id="IuK-aD-a1G"/>
+                        <outlet property="winnerLabel" destination="Gn7-9B-rQH" id="GhQ-4K-Hrx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
